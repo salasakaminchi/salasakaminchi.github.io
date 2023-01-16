@@ -6,14 +6,14 @@
     <description>Descripción del sitio</description>
     <language>es-MX</language>
     <item>
-      <title>Juventud de Salasaka #1</title>
+      <title>Juventud de Salasaka - Episodio #1</title>
       <link>https://runacast.com/podcast-00</link>
       <description>Abordamos una breve revisión sobre el estado de del idioma Kichwa en Salasaka</description>
       <pubDate> Wed, 28 Dic 2022 08:00:00 UTC-5</pubDate>
       <enclosure url="https://runacast.com/media/podcast-00.mp3" length="19887448" type="audio/mpeg"/>
     </item>
     <item>
-      <title>Opinión sobre las campañas políticas</title>
+      <title>Opinión sobre las campañas políticas - Episodio #2</title>
       <link>https://runacast.com/podcast-01</link>
       <description>Descripción del episodio 2</description>
       <pubDate>Fecha de publicación del episodio 2 (en formato RFC-822)</pubDate>
