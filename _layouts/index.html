@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/css/base.css' | relative_url }}" />
+	<link rel="stylesheet" href="{{ '/css/custom.css' | relative_url }}" />
+    <script type="text/javascript" src="{{ 'js/jquery.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ 'js/jquery.jplayer.min.js' | relative_url }}"></script>
+    <script type="text/javascript" src="{{ 'js/jplayer.playlist.min.js' | relative_url }}"></script>
+	<script type="text/javascript" src="{{ 'js/svg-injector.min.js' | relative_url }}"></script>
+</head>
+<body>
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+    <script>
+    var myPlaylist = new jPlayerPlaylist({
+		jPlayer: "#player",
+		cssSelectorAncestor: "#player-container"
+	}, [
+		{% for episode in site.data.episodes %}
+        {
+			title:"{{ episode.title }}",
+			artist:"{{ episode.artist }}",
+			mp3:"{{ episode.mp3 }}",
+			oga:"{{ episode.ogg }}",
+			poster: "{{ episode.cover }}"
+		},
+        {% endfor %}
+	], {
+		playlistOptions: {
+			enableRemoveControls: true
+		},
+		swfPath: "../../dist/jplayer",
+		supplied: "webmv, ogv, m4v, oga, mp3",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		audioFullScreen: true
+	});
+
+    var container = $('#player-container');
+
+    container.find('.btn-action').click(function(){
+
+		var button = $(this);
+
+		if(button.is('.play')){
+
+			button.removeClass('play').addClass('pause');
+			myPlaylist.pause();
+
+			button.find('.svg-img.play').removeClass('none');
+			button.find('.svg-img.pause').addClass('none');
+
+		}else
+		if(button.is('.pause')){
+
+			button.removeClass('pause').addClass('play');
+			myPlaylist.play();
+
+			button.find('.svg-img.play').addClass('none');
+			button.find('.svg-img.pause').removeClass('none');
+
+		}
+		
+    });
+
+	/* Insert svg images */
+    SVGInjector($(document).find('img.svg-img'));
+
+    </script>
+</body>
+</html>

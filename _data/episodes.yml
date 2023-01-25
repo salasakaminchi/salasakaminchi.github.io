@@ -1,0 +1,21 @@
+- name: Podcast 1
+  title: Juventud de Salasaca
+  artist: Runa Shimi Podcast
+  description: En esta ocación hablamos sobre los problemas de alcoholismo, la drogadicción en los jovenes indigenas y su implicación en nuestra comunidad.
+  cover: /images/portada.png
+  mp3: /media/podcast-01.mp3
+  ogg: /media/podcast-01.ogg
+- name: Podcast 2
+  title: Elecciones 2023
+  artist: Runa Shimi Podcast
+  description: Hablamos sobre las elecciones que se aproxima y cuáles son los candidatos.
+  cover: /images/portada.png
+  mp3: /media/podcast-02.mp3
+  ogg: /media/podcast-02.ogg
+- name: Podcast 3
+  title: Origenes de Salasaca
+  artist: Runa Shimi Podcast
+  description: Hablamos acerca de los origenes del pueblo indígena de Salasaca.
+  cover: /images/portada.png
+  mp3: /media/podcast-03.mp3
+  ogg: /media/podcast-03.ogg

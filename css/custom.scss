@@ -1,0 +1,54 @@
+---
+# custom style
+---
+
+@import 'template';
+
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    .content{
+        max-width: 980px;
+    }
+}
+
+#header{
+    background: transparent url('../images/top-bg.jpg') center top no-repeat;
+    .content{
+        position: relative;
+        height: 450px;
+    }
+    .title{
+        position: absolute;
+        bottom: 0;
+        margin: 20px;
+        font-size: 20pt;
+    }
+}
+
+#page{
+    .content{
+        padding: 20px;
+    }
+}
+
+#player-container{
+    #player{
+        display: block;
+        width: 200px;
+    }
+    .controls{
+        padding: 20px;
+        .btn-action{
+            background-color: black;
+            border-radius: 5px;
+            display: block;
+            padding: 20px;
+            cursor: pointer;
+            .svg-img{
+                width: 40px;
+                height: 40px;
+                fill: aliceblue;
+            }
+        }
+    }
+}

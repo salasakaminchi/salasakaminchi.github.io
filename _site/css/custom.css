@@ -1,0 +1,21 @@
+.container { font-family: Arial, Helvetica, sans-serif; }
+
+.container .content { max-width: 980px; }
+
+#header { background: transparent url("../images/top-bg.jpg") center top no-repeat; }
+
+#header .content { position: relative; height: 450px; }
+
+#header .title { position: absolute; bottom: 0; margin: 20px; font-size: 20pt; }
+
+#page .content { padding: 20px; }
+
+#player-container #player { display: block; width: 200px; }
+
+#player-container .controls { padding: 20px; }
+
+#player-container .controls .btn-action { background-color: black; border-radius: 5px; display: block; padding: 20px; cursor: pointer; }
+
+#player-container .controls .btn-action .svg-img { width: 40px; height: 40px; fill: aliceblue; }
+
+/*# sourceMappingURL=custom.css.map */

@@ -2,13 +2,121 @@
 <html lang="en">
 <head>
 	<title>RunaShimi Podcast</title>
+    <link rel="stylesheet" href="/css/base.css" />
+	<link rel="stylesheet" href="/css/custom.css" />
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
+    <script type="text/javascript" src="/js/jplayer.playlist.min.js"></script>
+	<script type="text/javascript" src="/js/svg-injector.min.js"></script>
 </head>
 <body>
-    <div>
-    <div>
-        <img style="width: 200px;" src="images/brand.jpg">
+    <div class="container" id="header">
+    <div class="content">
+        <div class="title">
+            <h2>RunaCast</h2>
+        </div>
     </div>
-    <p>Publicaciones de Runa Shimi Podcast</p>
 </div>
+    <div class="container" id="page">
+    <div class="content">
+        <h3>Podcast - En runa shimi</h3>
+        <br>
+        <div class="box">
+            <div id="player-container" class="" role="application" aria-label="media player">
+                <div id="player" class=""></div>
+                <div class="player-interface">
+                    <div class="controls">
+                        <button type="button" class="btn btn-action pause">
+                            <img class="svg-img play" data-src="/images/svg/media-play.svg">
+                            <img class="svg-img pause none" data-src="/images/svg/media-pause.svg">
+                        </button>
+                    </div>
+                </div>
+                <div class="jp-playlist">
+                    <ul>
+                        <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+                        <li>&nbsp;</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div> 
+</div>
+    
+    <script>
+    var myPlaylist = new jPlayerPlaylist({
+		jPlayer: "#player",
+		cssSelectorAncestor: "#player-container"
+	}, [
+		
+        {
+			title:"Juventud de Salasaca",
+			artist:"Runa Shimi Podcast",
+			mp3:"/media/podcast-01.mp3",
+			oga:"/media/podcast-01.ogg",
+			poster: "/images/portada.png"
+		},
+        
+        {
+			title:"Elecciones 2023",
+			artist:"Runa Shimi Podcast",
+			mp3:"/media/podcast-02.mp3",
+			oga:"/media/podcast-02.ogg",
+			poster: "/images/portada.png"
+		},
+        
+        {
+			title:"Origenes de Salasaca",
+			artist:"Runa Shimi Podcast",
+			mp3:"/media/podcast-03.mp3",
+			oga:"/media/podcast-03.ogg",
+			poster: "/images/portada.png"
+		},
+        
+	], {
+		playlistOptions: {
+			enableRemoveControls: true
+		},
+		swfPath: "../../dist/jplayer",
+		supplied: "webmv, ogv, m4v, oga, mp3",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		audioFullScreen: true
+	});
+
+    var container = $('#player-container');
+
+    container.find('.btn-action').click(function(){
+
+		var button = $(this);
+
+		if(button.is('.play')){
+
+			button.removeClass('play').addClass('pause');
+			myPlaylist.pause();
+
+			button.find('.svg-img.play').removeClass('none');
+			button.find('.svg-img.pause').addClass('none');
+
+		}else
+		if(button.is('.pause')){
+
+			button.removeClass('pause').addClass('play');
+			myPlaylist.play();
+
+			button.find('.svg-img.play').addClass('none');
+			button.find('.svg-img.pause').removeClass('none');
+
+		}
+		
+    });
+
+	/* Insert svg images */
+    SVGInjector($(document).find('img.svg-img'));
+
+    </script>
 </body>
 </html>

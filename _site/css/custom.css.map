@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "custom.css",
+	"sources": [
+		"custom.scss",
+		"_sass/_template.scss"
+	],
+	"sourcesContent": [
+		"@import 'template';\n\n.container{\n    font-family: Arial, Helvetica, sans-serif;\n    .content{\n        max-width: 980px;\n    }\n}\n\n#header{\n    background: transparent url('../images/top-bg.jpg') center top no-repeat;\n    .content{\n        position: relative;\n        height: 450px;\n    }\n    .title{\n        position: absolute;\n        bottom: 0;\n        margin: 20px;\n        font-size: 20pt;\n    }\n}\n\n#page{\n    .content{\n        padding: 20px;\n    }\n}\n\n#player-container{\n    #player{\n        display: block;\n        width: 200px;\n    }\n    .controls{\n        padding: 20px;\n        .btn-action{\n            background-color: black;\n            border-radius: 5px;\n            display: block;\n            padding: 20px;\n            cursor: pointer;\n            .svg-img{\n                width: 40px;\n                height: 40px;\n                fill: aliceblue;\n            }\n        }\n    }\n}",
+		""
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,UAAU,CAAA,EACN,WAAW,EAAE,4BAA4B,GAI5C;;AALD,AAEI,UAFM,CAEN,QAAQ,CAAA,EACJ,SAAS,EAAE,KAAK,GACnB;;AAGL,AAAA,OAAO,CAAA,EACH,UAAU,EAAE,WAAW,CAAC,2BAA2B,CAAC,MAAM,CAAC,GAAG,CAAC,SAAS,GAW3E;;AAZD,AAEI,OAFG,CAEH,QAAQ,CAAA,EACJ,QAAQ,EAAE,QAAQ,EAClB,MAAM,EAAE,KAAK,GAChB;;AALL,AAMI,OANG,CAMH,MAAM,CAAA,EACF,QAAQ,EAAE,QAAQ,EAClB,MAAM,EAAE,CAAC,EACT,MAAM,EAAE,IAAI,EACZ,SAAS,EAAE,IAAI,GAClB;;AAGL,AACI,KADC,CACD,QAAQ,CAAA,EACJ,OAAO,EAAE,IAAI,GAChB;;AAGL,AACI,iBADa,CACb,OAAO,CAAA,EACH,OAAO,EAAE,KAAK,EACd,KAAK,EAAE,KAAK,GACf;;AAJL,AAKI,iBALa,CAKb,SAAS,CAAA,EACL,OAAO,EAAE,IAAI,GAahB;;AAnBL,AAOQ,iBAPS,CAKb,SAAS,CAEL,WAAW,CAAA,EACP,gBAAgB,EAAE,KAAK,EACvB,aAAa,EAAE,GAAG,EAClB,OAAO,EAAE,KAAK,EACd,OAAO,EAAE,IAAI,EACb,MAAM,EAAE,OAAO,GAMlB;;AAlBT,AAaY,iBAbK,CAKb,SAAS,CAEL,WAAW,CAMP,QAAQ,CAAA,EACJ,KAAK,EAAE,IAAI,EACX,MAAM,EAAE,IAAI,EACZ,IAAI,EAAE,SAAS,GAClB"
+}
