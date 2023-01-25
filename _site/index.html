@@ -55,7 +55,7 @@
 			artist:"Runa Shimi Podcast",
 			mp3:"/media/podcast-01.mp3",
 			oga:"/media/podcast-01.ogg",
-			poster: "/images/portada.png"
+			poster: "/images/portada_podcast.jpg"
 		},
         
         {
@@ -63,7 +63,7 @@
 			artist:"Runa Shimi Podcast",
 			mp3:"/media/podcast-02.mp3",
 			oga:"/media/podcast-02.ogg",
-			poster: "/images/portada.png"
+			poster: "/images/portada_podcast.jpg"
 		},
         
         {
@@ -71,7 +71,7 @@
 			artist:"Runa Shimi Podcast",
 			mp3:"/media/podcast-03.mp3",
 			oga:"/media/podcast-03.ogg",
-			poster: "/images/portada.png"
+			poster: "/images/portada_podcast.jpg"
 		},
         
 	], {
@@ -87,9 +87,9 @@
 		audioFullScreen: true
 	});
 
-    var container = $('#player-container');
+    var playerContainer = $('#player-container');
 
-    container.find('.btn-action').click(function(){
+    playerContainer.find('.btn-action').click(function(){
 
 		var button = $(this);
 
@@ -113,6 +113,8 @@
 		}
 		
     });
+
+	playerContainer.find('#jp_poster_0').css({width: '260px', height: '260px'});
 
 	/* Insert svg images */
     SVGInjector($(document).find('img.svg-img'));
