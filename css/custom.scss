@@ -5,9 +5,15 @@
 @import 'template';
 
 .container{
+
     font-family: Arial, Helvetica, sans-serif;
     .content{
         max-width: 980px;
+    }
+    .menu-list{
+        li{
+            line-height: normal;
+        }
     }
 }
 
@@ -31,24 +37,50 @@
     }
 }
 
+#footer{
+    margin-top: 40px;
+    .content{
+        padding: 20px;
+    }
+}
+
 #player-container{
     #player{
         display: block;
-        width: 200px;
+        max-width: 260px;
+    }
+    .display{
+        display: block;
     }
     .controls{
-        padding: 20px;
+        padding: 10px;
+        margin: 0;
         .btn-action{
             background-color: black;
             border-radius: 5px;
             display: block;
-            padding: 20px;
+            padding: 15px;
             cursor: pointer;
             .svg-img{
-                width: 40px;
-                height: 40px;
+                width: 30px;
+                height: 30px;
                 fill: aliceblue;
             }
+        }
+    }
+    .audio-list{
+        li{
+            border-top: 1px solid #4F4f4F;
+            padding: 20px;
+            a.jp-playlist-item{
+                display: block;
+            }
+            a.jp-playlist-item-remove{
+                display: none !important;
+            }
+        }
+        li:first-child{
+            border-top: none;
         }
     }
 }

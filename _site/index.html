@@ -25,7 +25,7 @@
         <br>
         <div class="box">
             <div id="player-container" class="" role="application" aria-label="media player">
-                <div id="player" class=""></div>
+                <div id="player" class="display"></div>
                 <div class="player-interface">
                     <div class="controls">
                         <button type="button" class="btn btn-action pause">
@@ -35,17 +35,34 @@
                     </div>
                 </div>
                 <div class="jp-playlist">
-                    <ul>
+                    <ul class="list audio-list">
                         <!-- The method Playlist.displayPlaylist() uses this unordered list -->
                         <li>&nbsp;</li>
                     </ul>
                 </div>
             </div>
         </div>
-        
     </div> 
 </div>
-    
+    <div id="footer" class="container">
+    <ul class="content">
+        <div class="row">
+            <div class="col-7">
+                <ul class="list menu-list">
+                    <li><a target="_blank" href="https://www.facebook.com/runashimipodcast">Facebook</a></li>
+                    <li><a target="_blank" href="https://www.ivoox.com/podcast-runashimi-podcast_sq_f11796080_1.html">Ivoox</a></li>
+                    <li><a target="_blank" href="https://www.youtube.com/@runashimimedia3706">Youtube</a></li>
+                </ul>
+            </div>
+            <div class="col-5"></div>
+        </div>
+        <br>
+        <hr>
+        <div class="row">
+            <sub>Runcast arte y cultura</sub>
+        </div>
+    </ul>
+</div>
     <script>
     var myPlaylist = new jPlayerPlaylist({
 		jPlayer: "#player",

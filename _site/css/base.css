@@ -257,6 +257,17 @@ body p{
     visibility: hidden;
 }
 
+.list{
+	list-style: none;
+	list-style-type: none;
+	margin: 0;
+}
+
+.list li{
+	list-style-type: none;
+	display: block;
+}
+
 /* Simple menu style */
 
 .menu{
