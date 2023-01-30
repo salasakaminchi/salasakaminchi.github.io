@@ -16,6 +16,7 @@
     {{ content }}
     {% include footer.html %}
     <script>
+	var playerContainer = $('#player-container');
     var myPlaylist = new jPlayerPlaylist({
 		jPlayer: "#player",
 		cssSelectorAncestor: "#player-container"
@@ -39,32 +40,36 @@
 		autoBlur: false,
 		smoothPlayBar: true,
 		keyEnabled: true,
-		audioFullScreen: true
-	});
+		audioFullScreen: true,
+		play: function(e){
+			
+			var button = playerContainer.find('.btn-action');
+			
+			button.removeClass('pause').addClass('play');
+			button.find('.svg-img.play').addClass('none');
+			button.find('.svg-img.pause').removeClass('none');
 
-    var playerContainer = $('#player-container');
+		},
+		pause: function(e){
+
+			var button = playerContainer.find('.btn-action');
+
+			button.removeClass('play').addClass('pause');
+			button.find('.svg-img.play').removeClass('none');
+			button.find('.svg-img.pause').addClass('none');
+
+		}
+	});
 
     playerContainer.find('.btn-action').click(function(){
 
 		var button = $(this);
 
 		if(button.is('.play')){
-
-			button.removeClass('play').addClass('pause');
 			myPlaylist.pause();
-
-			button.find('.svg-img.play').removeClass('none');
-			button.find('.svg-img.pause').addClass('none');
-
 		}else
 		if(button.is('.pause')){
-
-			button.removeClass('pause').addClass('play');
 			myPlaylist.play();
-
-			button.find('.svg-img.play').addClass('none');
-			button.find('.svg-img.pause').removeClass('none');
-
 		}
 		
     });

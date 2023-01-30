@@ -64,16 +64,25 @@
     </ul>
 </div>
     <script>
+	var playerContainer = $('#player-container');
     var myPlaylist = new jPlayerPlaylist({
 		jPlayer: "#player",
 		cssSelectorAncestor: "#player-container"
 	}, [
 		
         {
-			title:"Juventud de Salasaca",
+			title:"Comunidades indígenas de Ecuador",
 			artist:"Runa Shimi Podcast",
-			mp3:"/media/podcast-01.mp3",
-			oga:"/media/podcast-01.ogg",
+			mp3:"/media/podcast-04.mp3",
+			oga:"/media/podcast-04.ogg",
+			poster: "/images/portada_podcast.jpg"
+		},
+        
+        {
+			title:"Origenes de Salasaca",
+			artist:"Runa Shimi Podcast",
+			mp3:"/media/podcast-03.mp3",
+			oga:"/media/podcast-03.ogg",
 			poster: "/images/portada_podcast.jpg"
 		},
         
@@ -86,10 +95,10 @@
 		},
         
         {
-			title:"Origenes de Salasaca",
+			title:"Juventud de Salasaca",
 			artist:"Runa Shimi Podcast",
-			mp3:"/media/podcast-03.mp3",
-			oga:"/media/podcast-03.ogg",
+			mp3:"/media/podcast-01.mp3",
+			oga:"/media/podcast-01.ogg",
 			poster: "/images/portada_podcast.jpg"
 		},
         
@@ -103,32 +112,36 @@
 		autoBlur: false,
 		smoothPlayBar: true,
 		keyEnabled: true,
-		audioFullScreen: true
-	});
+		audioFullScreen: true,
+		play: function(e){
+			
+			var button = playerContainer.find('.btn-action');
+			
+			button.removeClass('pause').addClass('play');
+			button.find('.svg-img.play').addClass('none');
+			button.find('.svg-img.pause').removeClass('none');
 
-    var playerContainer = $('#player-container');
+		},
+		pause: function(e){
+
+			var button = playerContainer.find('.btn-action');
+
+			button.removeClass('play').addClass('pause');
+			button.find('.svg-img.play').removeClass('none');
+			button.find('.svg-img.pause').addClass('none');
+
+		}
+	});
 
     playerContainer.find('.btn-action').click(function(){
 
 		var button = $(this);
 
 		if(button.is('.play')){
-
-			button.removeClass('play').addClass('pause');
 			myPlaylist.pause();
-
-			button.find('.svg-img.play').removeClass('none');
-			button.find('.svg-img.pause').addClass('none');
-
 		}else
 		if(button.is('.pause')){
-
-			button.removeClass('pause').addClass('play');
 			myPlaylist.play();
-
-			button.find('.svg-img.play').addClass('none');
-			button.find('.svg-img.pause').removeClass('none');
-
 		}
 		
     });
