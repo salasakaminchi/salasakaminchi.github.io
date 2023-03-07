@@ -1,34 +1,48 @@
+- name: Podcast 7
+  title: Entrevista improvisado
+  artist: Runacast
+  description: Hablando y opinando sobre la gente de Salasaca sus costumbres, tradiciones y la situación actual del pueblo de Salasaca.
+  cover: /images/portada_podcast.jpg
+  mp3: /media/podcast-07.mp3
+  ogg: /media/podcast-07.ogg
+- name: Podcast 6
+  title: Hablando de los incas y su expansión
+  artist: Runacast
+  description: Hablando y opinando un poco sobre los Incas, Mayas y otros pueblos de América. Como estos se desarrollaron y algunas cuestiones más.
+  cover: /images/portada_podcast.jpg
+  mp3: /media/podcast-06.mp3
+  ogg: /media/podcast-06.ogg
 - name: Podcast 5
   title: Opinando sobre las elecciones 2023 y el partido Pachakutik
-  artist: Runa Shimi Podcast
+  artist: Runacast
   description: Un resumen y opinión sobre las ultimas elecciones 2023, alcaldes y los demás gremios.
   cover: /images/portada_podcast.jpg
   mp3: /media/podcast-05.mp3
   ogg: /media/podcast-05.ogg
 - name: Podcast 4
   title: Comunidades indígenas de Ecuador
-  artist: Runa Shimi Podcast
+  artist: Runacast
   description: En esta ocación hablamos un poco de otras comunidades indígenas que conforman el Ecuador.
   cover: /images/portada_podcast.jpg
   mp3: /media/podcast-04.mp3
   ogg: /media/podcast-04.ogg
 - name: Podcast 3
   title: Origenes de Salasaca
-  artist: Runa Shimi Podcast
+  artist: Runacast
   description: Hablamos acerca de los origenes del pueblo indígena de Salasaca.
   cover: /images/portada_podcast.jpg
   mp3: /media/podcast-03.mp3
   ogg: /media/podcast-03.ogg
 - name: Podcast 2
   title: Elecciones 2023
-  artist: Runa Shimi Podcast
+  artist: Runacast
   description: Hablamos sobre las elecciones que se aproxima y cuáles son los candidatos.
   cover: /images/portada_podcast.jpg
   mp3: /media/podcast-02.mp3
   ogg: /media/podcast-02.ogg
 - name: Podcast 1
   title: Juventud de Salasaca
-  artist: Runa Shimi Podcast
+  artist: Runacast
   description: En esta ocación hablamos sobre los problemas de alcoholismo, la drogadicción en los jovenes indigenas y su implicación en nuestra comunidad.
   cover: /images/portada_podcast.jpg
   mp3: /media/podcast-01.mp3
