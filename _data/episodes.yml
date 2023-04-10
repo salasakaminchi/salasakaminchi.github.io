@@ -1,3 +1,17 @@
+- name: Podcast 9
+  title: Entrevista Salasaca generaciones pasadas
+  artist: Runacast
+  description: Hablando sobre como era Salasaca en épocas de nuestros padres y como ha evolucionado el pueblo.
+  cover: /images/portada_podcast.jpg
+  mp3: /media/podcast-09.mp3
+  ogg: /media/podcast-09.ogg
+- name: Podcast 8
+  title: Hablando sobre religión y supersticiones
+  artist: Runacast
+  description: Opinando sobre la superstición y creencias de las personas religiosas.
+  cover: /images/portada_podcast.jpg
+  mp3: /media/podcast-09.mp3
+  ogg: /media/podcast-09.ogg
 - name: Podcast 7
   title: Entrevista improvisado
   artist: Runacast
